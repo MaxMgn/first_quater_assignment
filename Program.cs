@@ -1,5 +1,16 @@
 ﻿string [] formArrayWithElementsConstistingNoMoreThanThreeSymbols (string [] in_array){
-    string [] out_array = new string [in_array.Length];
+    // подсчёт количества элементов второго массива
+    int outArrayLength = 0;
+    for (int i = 0; i < in_array.Length; i++)
+    {
+        if (in_array[i].Length < 4)
+        {
+            outArrayLength++;
+        }
+    }
+    // заполнение второго массива
+    string [] out_array = new string [outArrayLength];
+    
     int j = 0;
     for (int i = 0; i < in_array.Length; i++)
     {
